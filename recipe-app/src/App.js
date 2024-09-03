@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import ImproveSkills from "./components/ImproveSkills";
 import QuoteSection from "./components/QuoteSection";
 import CheifSection from "./components/CheifSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,12 +11,17 @@ function App() {
       
       <Navbar />
       <div className="container main">
+        
         <HeroSection />
         <ImproveSkills />
         <QuoteSection />
         <CheifSection />
+        </div>
+        <div>
+        <Footer />
+        </div>
       </div>
-    </div>
+    
   );
 }
 

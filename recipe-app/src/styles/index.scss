@@ -98,17 +98,34 @@ img{
 @import "partials/chiefs-Section.scss";
 
 
+@import "partials/footer.scss";
+
+
+
 
 .main{
     padding-block: 3vw;
 }
 .container{
-    padding-inline: 15vw;
+    padding-inline: 25vw;
 
 }
 
 
 @import "partials/animation.scss";
+@media  screen and (max-width: 1288px) {
+
+    .container{
+        padding-inline:18vw;
+    }
+}
+@media  screen and (max-width: 1050px) {
+
+    
+    .container{
+        padding-inline:12vw;
+    }
+}
 
 @media  screen and (max-width: 768px) {
     .navbar{
@@ -119,5 +136,24 @@ img{
             display: block;
         }
     }
+    .section{
+        .col{
+            width:100%;
+        }
+    }
+    .cheif-card{
+        box-shadow: 0 5px 10px var(--shadow-color);
+    }
     
+    .container{
+        padding-inline:6vw;
+    }
+    
+}
+@media  screen and (max-width: 480px) {
+
+    
+    .container{
+        padding-inline:3vw;
+    }
 }
