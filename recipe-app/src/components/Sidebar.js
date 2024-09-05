@@ -1,18 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link, useLocation } from "react-router-dom"
 
-function Sidebar  ({ links, close })  {
-    return ( 
-      <div className="sidebar" onClick={close}>
-         { links.map(link => (
-           <a  className="sidebar-link active" href="#!" key={link.name}>
-              <FontAwesomeIcon icon={link.icon} />
-                 {link.name}
-                </a>
-           ))}
-
-      </div>
-
-     );
+export default function Sidebar({links, close}){
+    const location = useLocation()
+    return (
+        <div className="sidebar" onClick={close}>
+            { links.map(link => (
+                <Link to={link.path} className={location.pathname === link.path ? "sidebar-link active" : "sidebar-link"} key={link.name}>
+                    <FontAwesomeIcon icon={link.icon} />
+                    {link.name}
+                </Link>
+            )) }
+        </div>
+    )
 }
- 
-export default Sidebar;
